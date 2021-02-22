@@ -1,0 +1,9 @@
+{% if messages %}
+<div class="messages">
+    {% for message in messages %}
+    <div {% if message.tags %} class="allert pl-2 alert-sm alert-{{ message.tags }}" style="margin-top: 16!important; margin-bottom: -0.8rem!important; line-height: 2;" {% endif %}>
+        {{ message }}
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
